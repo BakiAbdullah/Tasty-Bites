@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useLoaderData, useLocation } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { FaThumbsUp } from "react-icons/fa";
 
 const ChefDetails = () => {
   const allChefdata = useContext(AuthContext);
@@ -24,11 +25,17 @@ const ChefDetails = () => {
               <div className="card-body">
                 <h2 className="card-title">
                   {chefData.name}
-                  <div className="badge badge-secondary">NEW</div>
+                  <div className="badge badge-secondary">
+                    {" "}
+                    <div className="flex items-center p-2">
+                      <FaThumbsUp className="mr-2"></FaThumbsUp>{" "}
+                      {chefData.likes}
+                    </div>{" "}
+                  </div>
                 </h2>
                 <p className="my-3">{chefData.bio.slice(0, 125)}...</p>
                 <div className="">
-                  <div>
+                  <div className="space-y-3">
                     <button
                       type="button"
                       class="border-2 border-red-800  text-black px-6 py-1  leading-none flex items-center"
@@ -38,8 +45,16 @@ const ChefDetails = () => {
                         {chefData.yearOfExp}
                       </span>
                     </button>
+                    <button
+                      type="button"
+                      class="border-2 border-red-800  text-black px-6 py-1  leading-none flex items-center"
+                    >
+                      Number Of Recipes{" "}
+                      <span class="p-1 rounded text-red-600 font-semibold ml-2">
+                        {chefData.numOfRecipes}
+                      </span>
+                    </button>
                   </div>
-              
                 </div>
               </div>
             </div>
