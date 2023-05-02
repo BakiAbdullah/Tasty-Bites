@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaBeer, FaUserCircle } from "react-icons/fa";
-import Banner from "../../Home/Banner";
+import ActiveLink from "../../../ActiveLink";
+// import Banner from "../../Home/Banner";
 
 const Header = () => {
   return (
@@ -30,13 +31,28 @@ const Header = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to="/">Home</Link>
+                <ActiveLink
+                  className="hover:bg-red-800 hover:text-white"
+                  to="/"
+                >
+                  Home
+                </ActiveLink>
               </li>
               <li>
-                <Link to="/orders">Orders</Link>
+                <ActiveLink
+                  className="hover:bg-red-800 hover:text-white"
+                  to="/contact"
+                >
+                  contact
+                </ActiveLink>
               </li>
               <li>
-                <Link to="/blog">Blog</Link>
+                <ActiveLink
+                  className="hover:bg-red-800 hover:text-white"
+                  to="/blog"
+                >
+                  Blog
+                </ActiveLink>
               </li>
             </ul>
           </div>
@@ -47,13 +63,25 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link className="hover:bg-red-800 hover:text-white" to="/">Home</Link>
+              <ActiveLink className="hover:bg-red-800 hover:text-white" to="/">
+                Home
+              </ActiveLink>
             </li>
             <li>
-              <Link className="hover:bg-red-800 hover:text-white">contact</Link>
+              <ActiveLink
+                className="hover:bg-red-800 hover:text-white"
+                to="/contact"
+              >
+                contact
+              </ActiveLink>
             </li>
             <li>
-              <Link className="hover:bg-red-800 hover:text-white" to="/blog">Blog</Link>
+              <ActiveLink
+                className="hover:bg-red-800 hover:text-white"
+                to="/blog"
+              >
+                Blog
+              </ActiveLink>
             </li>
           </ul>
         </div>

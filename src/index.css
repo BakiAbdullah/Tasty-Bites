@@ -9,3 +9,8 @@
     font-family: poppins, sans-serif;
   }
 }
+
+.active-color{
+  color: white;
+  background-color: brown;
+}
