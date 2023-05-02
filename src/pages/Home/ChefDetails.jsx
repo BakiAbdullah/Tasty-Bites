@@ -12,7 +12,7 @@ const ChefDetails = () => {
     <div>
       <h2 className="font-bold text-center my-16 text-5xl">Our Top Chefs</h2>
 
-      <div className="grid gap-8 container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid px-10 gap-8 container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {chefDatas.map((chefData) => {
           return (
             <div className="card w-full bg-base-100 shadow-xl">

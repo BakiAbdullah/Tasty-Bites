@@ -40,7 +40,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <p className="font-medium text-4xl">
+          <p className="font-bold text-4xl">
             Tasty<span className="text-red-800">Bites</span>
           </p>
         </div>

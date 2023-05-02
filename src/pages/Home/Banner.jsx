@@ -51,42 +51,42 @@ const Banner = () => {
           >
             <SwiperSlide>
               <img
-                className="rounded-2xl h-[600px] w-full"
+                className="rounded-2xl object-cover h-[600px] w-full"
                 src={banner_3}
                 alt=""
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                className="rounded-2xl h-[600px] w-full"
+                className="rounded-2xl object-cover h-[600px] w-full"
                 src={banner_2}
                 alt=""
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                className="rounded-2xl h-[600px] w-full"
+                className="rounded-2xl object-cover h-[600px] w-full"
                 src={banner_3}
                 alt=""
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                className="rounded-2xl h-[600px] w-full"
+                className="rounded-2xl object-cover h-[600px] w-full"
                 src={banner_2}
                 alt=""
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                className="rounded-2xl h-[600px] w-full"
+                className="rounded-2xl object-cover h-[600px] w-full"
                 src={banner_3}
                 alt=""
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                className="rounded-2xl h-[600px] w-full"
+                className="rounded-2xl object-cover h-[600px] w-full"
                 src={banner_2}
                 alt=""
               />
