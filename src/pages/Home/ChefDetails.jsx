@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useLoaderData, useLocation } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-import { FaThumbsUp } from "react-icons/fa";
+import { FaLongArrowAltRight, FaThumbsUp } from "react-icons/fa";
 
 const ChefDetails = () => {
   const allChefdata = useContext(AuthContext);
@@ -10,7 +10,9 @@ const ChefDetails = () => {
 
   return (
     <div>
-      <h2 className="font-bold text-center my-16 text-5xl">Our Top Chefs</h2>
+      <h2 className="font-bold text-center my-16 text-5xl">
+        <span className="text-red-800">Our</span> Top Chefs
+      </h2>
 
       <div className="grid px-10 gap-8 container mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {chefDatas.map((chefData) => {
@@ -55,6 +57,10 @@ const ChefDetails = () => {
                       </span>
                     </button>
                   </div>
+                  <button className="bg-amber-500 text-black px-6 py-2 mt-8 rounded-md">
+                    View Recipes{" "}
+                    <FaLongArrowAltRight className="inline-block text-red-800 duration-150 hover:transition-all hover:translate-x-1"></FaLongArrowAltRight>{" "}
+                  </button>
                 </div>
               </div>
             </div>
