@@ -47,13 +47,13 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to="/">Home</Link>
+              <Link className="hover:bg-red-800 hover:text-white" to="/">Home</Link>
             </li>
             <li>
-              <Link to="/contact">contact</Link>
+              <Link className="hover:bg-red-800 hover:text-white">contact</Link>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link className="hover:bg-red-800 hover:text-white" to="/blog">Blog</Link>
             </li>
           </ul>
         </div>
@@ -73,7 +73,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <Banner></Banner>
     </div>
   );
 };

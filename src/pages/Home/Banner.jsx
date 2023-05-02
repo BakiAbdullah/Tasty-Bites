@@ -1,14 +1,19 @@
 import React from "react";
 import banner_1 from "../../assets/food_banner_1.jpg";
-import banner_2 from "../../assets/food_banner_2.jpg";
-import banner_3 from "../../assets/food_banner_3.jpg";
+import quils from "../../../public/quils.jpg"
+import banner_3 from "../../../public/food_banner_3.jpg";
+import pancakes from "../../../public/pancakes.jpg";
+import yuba from "../../../public/dumplings.jpg";
+import shrimp from "../../../public/shrimp.jpg";
+import beef from "../../../public/beefbroccoli.jpg";
+import chicken from "../../../public/fry-chicken.jpg";
+
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -27,10 +32,13 @@ const Banner = () => {
           <p className="text-white py-7">
             Discover the art of cooking with our expert chefs and culinary
             enthusiasts. From recipes to techniques, our website offers
-            everything you need to enhance your culinary skills...
+            everything you need to enhance your culinary skills. With our expert
+            guidance and insider tips, you'll be able to take your cooking to
+            the next level and impress your friends and family with your
+            delicious creations....
           </p>
           <button className="bg-amber-500 text-black px-6 py-2 rounded-md">
-            Contact Us {" "}
+            Contact Us{" "}
             <FaLongArrowAltRight className="inline-block"></FaLongArrowAltRight>{" "}
           </button>
         </div>
@@ -52,42 +60,42 @@ const Banner = () => {
             <SwiperSlide>
               <img
                 className="rounded-2xl object-cover h-[600px] w-full"
-                src={banner_3}
+                src={quils}
                 alt=""
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 className="rounded-2xl object-cover h-[600px] w-full"
-                src={banner_2}
+                src={yuba}
                 alt=""
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 className="rounded-2xl object-cover h-[600px] w-full"
-                src={banner_3}
+                src={shrimp}
                 alt=""
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 className="rounded-2xl object-cover h-[600px] w-full"
-                src={banner_2}
+                src={chicken}
                 alt=""
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 className="rounded-2xl object-cover h-[600px] w-full"
-                src={banner_3}
+                src={beef}
                 alt=""
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 className="rounded-2xl object-cover h-[600px] w-full"
-                src={banner_2}
+                src={pancakes}
                 alt=""
               />
             </SwiperSlide>
