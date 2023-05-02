@@ -1,6 +1,6 @@
 import React from "react";
 import banner_1 from "../../assets/food_banner_1.jpg";
-import quils from "../../../public/quils.jpg"
+import quils from "../../../public/quils.jpg";
 import banner_3 from "../../../public/food_banner_3.jpg";
 import pancakes from "../../../public/pancakes.jpg";
 import yuba from "../../../public/dumplings.jpg";
@@ -27,7 +27,8 @@ const Banner = () => {
       <div className="flex justify-between gap-10 w-full container mx-auto py-16 items-center">
         <div className="w-2/5">
           <h2 className="text-white text-6xl leading-tight tracking-tighter font-bold">
-            <span className="text-red-800">COOKING </span>IS A PIECE OF CAKE
+            "The Art of Cuisine: the Magic of Our{" "}
+            <span className="text-red-800"> Master Chef </span>"
           </h2>
           <p className="text-white py-7">
             Discover the art of cooking with our expert chefs and culinary

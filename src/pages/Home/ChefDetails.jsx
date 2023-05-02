@@ -1,12 +1,17 @@
 import React, { useContext } from "react";
-import { useLoaderData, useLocation } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaLongArrowAltRight, FaThumbsUp } from "react-icons/fa";
 
 const ChefDetails = () => {
   const allChefdata = useContext(AuthContext);
   const chefDatas = allChefdata.chefData;
-  console.log(chefDatas);
+  const { id } = useParams();
+  const singleChefData = useLoaderData();
+  // console.log(singleChefData);
+
+  //  console.log(id)
+  // console.log(chefDatas);
 
   return (
     <div>
@@ -40,27 +45,29 @@ const ChefDetails = () => {
                   <div className="space-y-3">
                     <button
                       type="button"
-                      class="border-2 border-red-800  text-black px-6 py-1  leading-none flex items-center"
+                      className="border-2 border-red-800  text-black px-6 py-1  leading-none flex items-center"
                     >
                       Years of Experience{" "}
-                      <span class="p-1 rounded text-red-600 font-semibold ml-2">
+                      <span className="p-1 rounded text-red-600 font-semibold ml-2">
                         {chefData.yearOfExp}
                       </span>
                     </button>
                     <button
                       type="button"
-                      class="border-2 border-red-800  text-black px-6 py-1  leading-none flex items-center"
+                      className="border-2 border-red-800  text-black px-6 py-1  leading-none flex items-center"
                     >
                       Number Of Recipes{" "}
-                      <span class="p-1 rounded text-red-600 font-semibold ml-2">
+                      <span className="p-1 rounded text-red-600 font-semibold ml-2">
                         {chefData.numOfRecipes}
                       </span>
                     </button>
                   </div>
-                  <button className="bg-amber-500 text-black px-6 py-2 mt-8 rounded-md">
-                    View Recipes{" "}
-                    <FaLongArrowAltRight className="inline-block text-red-800 duration-150 hover:transition-all hover:translate-x-1"></FaLongArrowAltRight>{" "}
-                  </button>
+                  <Link to="/recipedetails">
+                    <button className="bg-amber-500 text-black px-6 py-2 mt-8 rounded-md">
+                      View Recipes{" "}
+                      <FaLongArrowAltRight className="inline-block text-red-800 duration-150 hover:transition-all hover:translate-x-1"></FaLongArrowAltRight>{" "}
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
