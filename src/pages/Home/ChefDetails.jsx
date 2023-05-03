@@ -7,9 +7,9 @@ import ChefDetailsCard from "./ChefDetailsCard";
 const ChefDetails = () => {
   const allChefdata = useContext(AuthContext);
   const chefDatas = allChefdata.chefData;
-  // const { id } = useParams();
-  // const singleChefData = useLoaderData();
-  // console.log(singleChefData);
+  const { id } = useParams();
+  const singleChefData = useLoaderData();
+  console.log(singleChefData);
 
   //  console.log(id)
   // console.log(chefDatas);

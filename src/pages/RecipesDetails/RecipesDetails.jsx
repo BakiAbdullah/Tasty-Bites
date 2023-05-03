@@ -8,7 +8,7 @@ const RecipesDetails = () => {
   const singleChefdata = useLocation().state;
   const chefName = singleChefdata.name;
 
-  console.log(singleChefdata);
+  // console.log(singleChefdata);
 
   const { recipesData } = useContext(AuthContext);
   // console.log(recipesData);

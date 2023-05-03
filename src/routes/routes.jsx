@@ -8,6 +8,7 @@ import Register from "../pages/Login/Registration";
 import Contact from "../pages/Contact/Contact";
 import RecipesDetails from "../pages/RecipesDetails/RecipesDetails";
 import RecipeDetailsLayout from "../layouts/RecipeDetailsLayout";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -17,16 +18,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        children: [
-          {
-            path: ":id",
-            element: <ChefDetails></ChefDetails>,
-            loader: ({ params }) =>
-              fetch(
-                `https://chef-recipe-server-side-bakiabdullah.vercel.app/chefdata/${params.id}`
-              ),
-          },
-        ],
+      },
+      {
+        path: "/recipedetails/",
+        element: (
+          <PrivateRoute>
+            <RecipesDetails></RecipesDetails>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/blog",
@@ -44,12 +43,23 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact></Contact>,
       },
-      {
-        path: "/recipedetails",
-        element: <RecipesDetails></RecipesDetails>,
-      },
     ],
   },
+  // {
+  //   path: "/recipedetails",
+  //   element: <RecipesDetails></RecipesDetails>,
+  //   children: [
+  //     {
+  //       path: "/recipedetails/:id",
+  //       element: <ChefDetails></ChefDetails>,
+  //       loader: ({ params }) =>
+  //         fetch(
+  //           `https://chef-recipe-server-side-bakiabdullah.vercel.app/chefdata/${params.id}`
+  //         ),
+  //     },
+  //   ],
+  // },
+
   // {
   //   path: "recipeDetails",
   //   element: <RecipeDetailsLayout></RecipeDetailsLayout>,
