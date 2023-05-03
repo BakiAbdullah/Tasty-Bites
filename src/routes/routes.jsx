@@ -9,11 +9,13 @@ import Contact from "../pages/Contact/Contact";
 import RecipesDetails from "../pages/RecipesDetails/RecipesDetails";
 import RecipeDetailsLayout from "../layouts/RecipeDetailsLayout";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
