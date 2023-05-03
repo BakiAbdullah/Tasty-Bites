@@ -14,12 +14,16 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import ChefDetails from "./ChefDetails";
 import Banner from "./Banner";
+import FeaturedRecipe from "./FeaturedRecipe";
+import Testimonials from "./Testimonials";
 
 const Home = () => {
   return (
     <div>
       <Banner></Banner>
       <ChefDetails></ChefDetails>
+      <FeaturedRecipe></FeaturedRecipe>
+      <Testimonials></Testimonials>
     </div>
   );
 };

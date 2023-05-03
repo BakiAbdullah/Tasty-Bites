@@ -2,20 +2,10 @@ import React from "react";
 
 const Blogs = () => {
   return (
-    <div className="bg-amber-50">
-      <h2 className="font-bold mb-16 text-4xl pt-32 text-gray-700 text-center">
+    <div>
+      <h2 className="font-bold mb-16 text-4xl pt-16 text-gray-700 text-center">
         Our Blogs
       </h2>
-      {/* <img
-        className="absolute rotate-180 top-0 bottom-0"
-        src="/Images/Vector.png"
-      />
-      <img className="absolute right-0 top-0" src="/Images/Vector1.png" /> */}
-      {/* <div className="text-center mb-8">
-          <h2 className="text-gray-700 my-16 font-bold mb-3 text-3xl">
-            Frequently Asked Questions
-          </h2>
-        </div> */}
       <div className="container lg:max-w-4xl mx-3 lg:mx-auto">
         <h4 className="text-gray-700 font-bold mb-3 text-xl">
           1.Tell us the differences between uncontrolled and controlled

@@ -21,7 +21,7 @@ const RecipesDetails = () => {
       <div>
         <ChefBannerCard value={singleChefdata}></ChefBannerCard>
       </div>
-      <h2 className="text-center text-3xl font-bold my-4">
+      <h2 className="text-center text-5xl font-bold my-12">
         3 best dishes of <span className="text-amber-500">{chefName}</span>
       </h2>
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-8">

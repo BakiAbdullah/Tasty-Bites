@@ -31,7 +31,7 @@ const RecipeDetailsCard = (props) => {
         <div className="card-actions justify-end">
           <button
             onClick={handleDisabled}
-            className={`btn bg-green-800 border-none text-white ${
+            className={`btn border-none text-white ${
               disabled ? "btn-disabled" : "btn-active"
             }`}
           >

@@ -113,7 +113,7 @@ const Header = () => {
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="rounded-full">
                   {user ? (
-                    <img src={user?.photoURL} alt="" srcset="" />
+                    <img src={user?.photoURL} alt="userimage" srcset="" />
                   ) : (
                     <FaUserCircle className="text-2xl"></FaUserCircle>
                   )}
