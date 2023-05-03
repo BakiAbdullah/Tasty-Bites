@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLongArrowAltRight, FaThumbsUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazy-load";
 
 const ChefDetailsCard = (props) => {
   const chefData = props.value;
@@ -9,9 +10,9 @@ const ChefDetailsCard = (props) => {
 
   return (
     <div className="card w-full bg-base-100 shadow-xl">
-      <figure>
+      <LazyLoad>
         <img className="w-full h-[650px] object-cover" src={picture} />
-      </figure>
+      </LazyLoad>
       <div className="card-body">
         <h2 className="card-title">
           {name}

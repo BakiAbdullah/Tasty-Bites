@@ -36,7 +36,10 @@ const ChefBannerCard = (props) => {
               </div>{" "}
             </div>
           </h2>
-          <p className="text-white py-7">Bio: {bio}</p>
+          <p className="text-white py-7">
+            {" "}
+            <span className="text-amber-500 font-bold">Bio:</span> {bio}
+          </p>
           <button
             type="button"
             className="border-2  border-amber-500  text-white px-6 py-1  leading-none flex items-center rounded-lg mb-8"

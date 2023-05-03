@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBeer, FaUserCircle } from "react-icons/fa";
 import ActiveLink from "../../../ActiveLink";
+import { AuthContext } from "../../../providers/AuthProvider";
 // import Banner from "../../Home/Banner";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  // const [isHovering, setIsHovering] = useState(false);
+  // const handleMouseOver = () => {
+  //   setIsHovering(!isHovering);
+  // };
+
+  const handleSignOut = () => {
+    logOut()
+      .then((result) => {})
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div>
       <div className="navbar shadow-md bg-amber-500 px-10 py-5">
@@ -85,8 +99,12 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end flex gap-4">
-          <Link to="/login">Login </Link>
+        <div className="navbar-end flex gap-4 mr-4">
+          {user ? (
+            <button onClick={handleSignOut}> Sign out</button>
+          ) : (
+            <Link to="/login">Login </Link>
+          )}
         </div>
 
         <div>
@@ -94,12 +112,41 @@ const Header = () => {
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="rounded-full">
-                  <FaUserCircle className="text-2xl"></FaUserCircle>
+                  {user ? (
+                    <img src={user?.photoURL} alt="" srcset="" />
+                  ) : (
+                    <FaUserCircle className="text-2xl"></FaUserCircle>
+                  )}
                 </div>
               </label>
             </div>
           </div>
         </div>
+        {/* <div>
+          <div
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOver}
+            role="button"
+            tabIndex={-3}
+            className="flex-none gap-2"
+          >
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="rounded-full">
+                  {user ? (
+                    isHovering ? (
+                      user.userName
+                    ) : (
+                      <img src={user?.photoURL} alt="" srcset="" />
+                    )
+                  ) : (
+                    <FaUserCircle className="text-2xl"></FaUserCircle>
+                  )}
+                </div>
+              </label>
+            </div>
+          </div>
+        </div> */}
       </div>
     </div>
   );

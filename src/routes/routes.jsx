@@ -4,7 +4,7 @@ import Home from "../pages/Home/Home";
 import Blogs from "../pages/Blogs/Blogs";
 import ChefDetails from "../pages/Home/ChefDetails";
 import Login from "../pages/Login/Login";
-import Register from "../pages/Login/Register";
+import Register from "../pages/Login/Registration";
 import Contact from "../pages/Contact/Contact";
 import RecipesDetails from "../pages/RecipesDetails/RecipesDetails";
 import RecipeDetailsLayout from "../layouts/RecipeDetailsLayout";

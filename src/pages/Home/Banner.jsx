@@ -14,6 +14,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import LazyLoad from "react-lazy-load";
 
 const Banner = () => {
   return (
@@ -59,46 +60,58 @@ const Banner = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img
-                className="rounded-2xl object-cover h-[600px] w-full"
-                src={quils}
-                alt=""
-              />
+              <LazyLoad>
+                <img
+                  className="rounded-2xl object-cover h-[600px] w-full"
+                  src={quils}
+                  alt=""
+                />
+              </LazyLoad>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                className="rounded-2xl object-cover h-[600px] w-full"
-                src={yuba}
-                alt=""
-              />
+              <LazyLoad>
+                <img
+                  className="rounded-2xl object-cover h-[600px] w-full"
+                  src={yuba}
+                  alt=""
+                />
+              </LazyLoad>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                className="rounded-2xl object-cover h-[600px] w-full"
-                src={shrimp}
-                alt=""
-              />
+              <LazyLoad>
+                <img
+                  className="rounded-2xl object-cover h-[600px] w-full"
+                  src={shrimp}
+                  alt=""
+                />
+              </LazyLoad>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                className="rounded-2xl object-cover h-[600px] w-full"
-                src={chicken}
-                alt=""
-              />
+              <LazyLoad>
+                <img
+                  className="rounded-2xl object-cover h-[600px] w-full"
+                  src={chicken}
+                  alt=""
+                />
+              </LazyLoad>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                className="rounded-2xl object-cover h-[600px] w-full"
-                src={beef}
-                alt=""
-              />
+              <LazyLoad>
+                <img
+                  className="rounded-2xl object-cover h-[600px] w-full"
+                  src={beef}
+                  alt=""
+                />
+              </LazyLoad>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                className="rounded-2xl object-cover h-[600px] w-full"
-                src={pancakes}
-                alt=""
-              />
+              <LazyLoad>
+                <img
+                  className="rounded-2xl object-cover h-[600px] w-full"
+                  src={pancakes}
+                  alt=""
+                />
+              </LazyLoad>
             </SwiperSlide>
           </Swiper>
         </div>
