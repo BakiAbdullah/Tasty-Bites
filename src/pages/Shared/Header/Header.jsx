@@ -6,7 +6,8 @@ import { AuthContext } from "../../../providers/AuthProvider";
 // import Banner from "../../Home/Banner";
 
 const Header = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, username } = useContext(AuthContext);
+  console.log(username);
 
   // const [isHovering, setIsHovering] = useState(false);
   // const handleMouseOver = () => {
@@ -113,7 +114,11 @@ const Header = () => {
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="rounded-full">
                   {user ? (
-                    <img src={user?.photoURL} alt="userimage" srcset="" />
+                    user?.photoURL ? (
+                      <img src={user.photoURL} alt="" srcset="" />
+                    ) : (
+                      <FaUserCircle className="text-2xl"></FaUserCircle>
+                    )
                   ) : (
                     <FaUserCircle className="text-2xl"></FaUserCircle>
                   )}

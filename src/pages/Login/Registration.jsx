@@ -5,9 +5,22 @@ import { FaGithub } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Registration = () => {
-  const { createUser } = useContext(AuthContext);
-
+  const { createUser, signInWithGoogle, setUser, handleUserName } =
+    useContext(AuthContext);
   const [error, setError] = useState("");
+
+  const handleRegisterwithGoogle = () => {
+    signInWithGoogle()
+      .then((result) => {
+        const loggedInUser = result.user;
+        setUser(loggedInUser);
+        // console.log(loggedInUser)
+        form.reset();
+        navigate(from, { replace: true });
+      })
+      .catch(console.error());
+  };
+
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -17,8 +30,7 @@ const Registration = () => {
     const password = form.floating_password.value;
     const confirm = form.repeat_password.value;
     setError("");
-
-    console.log(name, photo, password, email, confirm);
+    handleUserName(name);
 
     if (password !== confirm) {
       setError("Your password did not match!");
@@ -30,7 +42,7 @@ const Registration = () => {
     createUser(email, password)
       .then((result) => {
         const createdUser = result.user;
-        console.log(createdUser);
+        setUser(createdUser);
         form.reset();
       })
       .catch((error) => {
@@ -193,6 +205,7 @@ const Registration = () => {
 
               <button
                 type="button"
+                onClick={handleRegisterwithGoogle}
                 className="w-full mb-5 block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300"
               >
                 <div className="flex items-center">

@@ -20,7 +20,13 @@ const AuthProvider = ({ children }) => {
   const [chefData, setChefData] = useState([]);
   const [recipesData, setRecipesData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [username, setUsername] = useState(null);
   const [user, setUser] = useState(null);
+
+  const handleUserName = (name) => {
+    setUsername(name);
+  };
+  console.log(user);
 
   const createUser = (email, password) => {
     setLoading(true);
@@ -33,6 +39,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const signInWithGoogle = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleAuthProvider);
   };
 
@@ -42,6 +49,7 @@ const AuthProvider = ({ children }) => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
+        setLoading(true);
         setUser(loggedUser);
       })
       .catch(console.error());
@@ -85,13 +93,16 @@ const AuthProvider = ({ children }) => {
 
   const authInfo = {
     user,
+    username,
     chefData,
     recipesData,
     loading,
+    setUser,
     createUser,
     signIn,
     signInWithGoogle,
     logOut,
+    handleUserName,
   };
 
   return (
