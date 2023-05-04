@@ -22,7 +22,7 @@ const Testimonials = () => {
           </div>
           <figure className="max-w-screen-md mx-auto">
             <svg
-              className="h-12 mx-auto mb-3 text-white"
+              className="h-12 mx-auto mb-3 text-amber-500"
               viewBox="0 0 24 27"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -45,11 +45,13 @@ const Testimonials = () => {
                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
                 alt="profile picture"
               />
-              <div className="flex items-center divide-x-2 divide-white">
+              <div className="flex items-center divide-x-2 divide-amber-500">
                 <div className="pr-3 font-medium text-white dark:text-white">
                   Micheal Dre
                 </div>
-                <div className="pl-3 text-sm font-light text-white">CEO at Grashhopper</div>
+                <div className="pl-3 text-sm font-light text-white">
+                  CEO at Grashhopper
+                </div>
               </div>
             </figcaption>
           </figure>
