@@ -65,36 +65,6 @@ const router = createBrowserRouter([
       },
     ],
   },
-
-  // {
-  //   path: "recipeDetails",
-  //   element: <RecipeDetailsLayout></RecipeDetailsLayout>,
-  //   children: [
-  //     {
-  //       path: "/recipedetails",
-  //       element: <RecipesDetails></RecipesDetails>,
-  //       loader: ({ params }) =>
-  //         fetch(
-  //           `https://chef-recipe-server-side-bakiabdullah.vercel.app/chefdata/${params.id}`
-  //         ),
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   path: "/",
-  //   element: <LoginLayout></LoginLayout>,
-  //   children: [
-  //     {
-  //       path: "/login",
-  //       element: <Login></Login>,
-  //     },
-  //     {
-  //       path: "/register",
-  //       element: <Registration></Registration>,
-  //     },
-  //   ],
-  // },
 ]);
 
 export default router;

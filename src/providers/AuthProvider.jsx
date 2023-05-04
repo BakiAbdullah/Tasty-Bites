@@ -50,7 +50,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const logOut = () => {
-    setLoading(true);
+    setLoading(false);
     return signOut(auth);
   };
 
@@ -59,7 +59,6 @@ const AuthProvider = ({ children }) => {
       .then((res) => res.json())
       .then((data) => setChefData(data))
       .catch((err) => console.log(err));
-    setLoading(false);
   }, []);
   // console.log(chefData);
 
@@ -68,7 +67,6 @@ const AuthProvider = ({ children }) => {
       .then((res) => res.json())
       .then((data) => setRecipesData(data))
       .catch((err) => console.log(err));
-    setLoading(false);
   }, []);
   // console.log(recipesData);
 
@@ -77,6 +75,7 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
       // console.log("Logged in user inside auth state Observer", loggedUser);
       setUser(loggedUser);
+      console.log(loggedUser);
       setLoading(false);
     });
 

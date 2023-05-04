@@ -18,15 +18,15 @@ const ChefBannerCard = (props) => {
       }}
       className="bg-cover bg-center min-h-screen text-white rounded-xl mb-16"
     >
-      <div className="flex justify-between gap-10 w-full container mx-auto py-16 items-center">
+      <div className="flex flex-col-reverse lg-flex-row px-4 lg:px-0 justify-between gap-10 w-full container mx-auto py-16 items-center">
         <LazyLoad className="mx-auto">
           <img
             src={picture}
-            className="rounded-lg object-cover w-[500px] h-[650px]"
+            className="rounded-lg object-cover w-[400px] lg:w-[500px] h-[400px] lg:h-[650px]"
           />
         </LazyLoad>
-        <div className="w-1/2 ">
-          <h2 className="text-amber-500 text-6xl leading-tight tracking-tighter font-bold">
+        <div className="lg:w-1/2">
+          <h2 className="text-amber-500 text-4xl lg:text-6xl leading-tight tracking-tighter font-bold">
             {name}
             <div className="badge bg-amber-500 ms-4">
               {" "}

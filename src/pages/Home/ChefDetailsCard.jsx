@@ -11,15 +11,15 @@ const ChefDetailsCard = (props) => {
   return (
     <div className="card w-full bg-base-100 shadow-xl">
       <LazyLoad>
-        <img className="w-full h-[650px] object-cover" src={picture} />
+        <img className="w-full h-[400px] lg:h-[650px] object-cover" src={picture} />
       </LazyLoad>
       <div className="card-body">
         <h2 className="card-title">
           {name}
-          <div className="badge badge-secondary">
+          <div className="badge text-white">
             {" "}
             <div className="flex items-center p-2">
-              <FaThumbsUp className="mr-2"></FaThumbsUp> {likes}
+              <FaThumbsUp className="mr-2 text-white"></FaThumbsUp> {likes}
             </div>{" "}
           </div>
         </h2>
@@ -47,15 +47,15 @@ const ChefDetailsCard = (props) => {
             </button>
           </div>
           <Link to={`/recipedetails/${chefId}`} state={chefData}>
-            <button className="bg-amber-500 text-black px-6 py-2 mt-8 rounded-md">
+            <button className="bg-red-900 text-white px-6 py-2 mt-8 rounded-md">
               View Recipes{" "}
-              <FaLongArrowAltRight className="inline-block text-red-800 duration-150 hover:transition-all hover:translate-x-1"></FaLongArrowAltRight>{" "}
+              <FaLongArrowAltRight className="inline-block text-white duration-150 hover:transition-all hover:translate-x-1"></FaLongArrowAltRight>{" "}
             </button>
           </Link>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default ChefDetailsCard;

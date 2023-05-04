@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import googleIcon from "../../../public/google.png";
+import googleIcon from "/google.png";
 import { FaGithub } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProvider";
 
@@ -64,18 +64,12 @@ const Login = () => {
         console.log(error);
       });
   };
-  // const handlePassword = (e) => {
-  //   const email = emailRef.current.value;
-  //   // if (!email) {
-  //   //   alert("please provide your email address to reset password");
-  //   // }
-  // };
 
   return (
-    <div className="container mx-auto">
+    <div className="container px-2 lg:px-0 mx-auto">
       <form
         onSubmit={handleLogin}
-        className="bg-white p-10 lg:p-14  border-2 rounded-lg w-2/3 lg:w-2/5 mx-auto mt-16"
+        className="bg-white p-6 lg:p-10 border-2 rounded-lg w-full lg:w-2/5 mx-auto mt-16"
       >
         <h1 className="text-xl md:text-2xl font-bold leading-tight mb-5">
           Log in to your account

@@ -1,12 +1,11 @@
 import React from "react";
 import banner_1 from "../../assets/food_banner_1.jpg";
-import quils from "../../../public/quils.jpg";
-import banner_3 from "../../../public/food_banner_3.jpg";
-import pancakes from "../../../public/pancakes.jpg";
-import yuba from "../../../public/dumplings.jpg";
-import shrimp from "../../../public/shrimp.jpg";
-import beef from "../../../public/beefbroccoli.jpg";
-import chicken from "../../../public/fry-chicken.jpg";
+import quils from "/quils.jpg";
+import pancakes from "/pancakes.jpg";
+import yuba from "/dumplings.jpg";
+import shrimp from "/shrimp.jpg";
+import beef from "/beefbroccoli.jpg";
+import chicken from "/fry-chicken.jpg";
 
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -25,9 +24,9 @@ const Banner = () => {
       }}
       className="bg-cover bg-center min-h-screen text-white"
     >
-      <div className="flex justify-between gap-10 w-full container mx-auto py-16 items-center">
-        <div className="w-2/5">
-          <h2 className="text-white text-6xl leading-tight tracking-tighter font-bold">
+      <div className="flex flex-col lg:flex-row justify-between gap-10 w-full container mx-auto py-16 items-center">
+        <div className="w-full px-5 lg:px-0 lg:w-2/5">
+          <h2 className="text-white text-4xl lg:text-6xl leading-tight tracking-tighter font-bold">
             "The Art of Cuisine: the Magic of Our{" "}
             <span className="text-red-800"> Master Chef </span>"
           </h2>
@@ -44,7 +43,7 @@ const Banner = () => {
             <FaLongArrowAltRight className="inline-block"></FaLongArrowAltRight>{" "}
           </button>
         </div>
-        <div className="w-3/5 pb-6">
+        <div className="w-full lg:w-3/5 px-2 lg:px-0  pb-6">
           <Swiper
             spaceBetween={30}
             centeredSlides={true}
@@ -62,7 +61,7 @@ const Banner = () => {
             <SwiperSlide>
               <LazyLoad>
                 <img
-                  className="rounded-2xl object-cover h-[600px] w-full"
+                  className="rounded-2xl object-cover h-[400px] lg:h-[600px] w-full"
                   src={quils}
                   alt=""
                 />
@@ -71,7 +70,7 @@ const Banner = () => {
             <SwiperSlide>
               <LazyLoad>
                 <img
-                  className="rounded-2xl object-cover h-[600px] w-full"
+                  className="rounded-2xl object-cover h-[400px] lg:h-[600px] w-full"
                   src={yuba}
                   alt=""
                 />
@@ -80,7 +79,7 @@ const Banner = () => {
             <SwiperSlide>
               <LazyLoad>
                 <img
-                  className="rounded-2xl object-cover h-[600px] w-full"
+                  className="rounded-2xl object-cover h-[400px] lg:h-[600px] w-full"
                   src={shrimp}
                   alt=""
                 />
@@ -89,7 +88,7 @@ const Banner = () => {
             <SwiperSlide>
               <LazyLoad>
                 <img
-                  className="rounded-2xl object-cover h-[600px] w-full"
+                  className="rounded-2xl object-cover h-[400px] lg:h-[600px] w-full"
                   src={chicken}
                   alt=""
                 />
@@ -98,7 +97,7 @@ const Banner = () => {
             <SwiperSlide>
               <LazyLoad>
                 <img
-                  className="rounded-2xl object-cover h-[600px] w-full"
+                  className="rounded-2xl object-cover h-[400px] lg:h-[600px] w-full"
                   src={beef}
                   alt=""
                 />
@@ -107,7 +106,7 @@ const Banner = () => {
             <SwiperSlide>
               <LazyLoad>
                 <img
-                  className="rounded-2xl object-cover h-[600px] w-full"
+                  className="rounded-2xl object-cover h-[400px] lg:h-[600px] w-full"
                   src={pancakes}
                   alt=""
                 />

@@ -15,7 +15,7 @@ const RecipesDetails = () => {
   const { id } = useParams();
   // console.log(id);
   const singleChefInfo = useLoaderData();
-  const name = singleChefInfo.chefName;
+  const name = singleChefInfo.name;
 
   // console.log(singleChefInfo);
 
@@ -24,10 +24,10 @@ const RecipesDetails = () => {
       <div>
         <ChefBannerCard value={singleChefInfo}></ChefBannerCard>
       </div>
-      <h2 className="text-center text-5xl font-bold my-12">
+      <h2 className="text-center text-3xl lg:text-4xl font-bold px-1 my-6 lg:my-12">
         3 best dishes of <span className="text-amber-500">{name}</span>
       </h2>
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-8">
+      <div className="grid lg:grid-cols-3 grid-cols-1 px-2 lg:px-0 gap-8">
         {recipesData.slice(0, 3).map((recipe) => (
           <RecipeDetailsCard
             key={recipe.recipeName}

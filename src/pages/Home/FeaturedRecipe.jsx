@@ -1,19 +1,19 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import yuba from "../../../public/yuba.jpg";
+import yuba from "/yuba.jpg";
 
 const FeaturedRecipe = () => {
   return (
     <div>
-      <h2 className="font-bold text-center my-16 text-5xl">
+      <h2 className="font-bold text-center my-10 lg:my-16 text-4xl lg:text-5xl">
         <span className="text-red-800">Our</span> Featured Recipe
       </h2>
 
-      <div className="flex flex-col items-center lg:flex-row  container gap-10 mx-auto px-10">
-        <div className="w-2/4">
+      <div className="flex flex-col items-center lg:flex-row  container gap-10 mx-auto px-2 lg:px-10">
+        <div className="lg:w-2/4">
           <img className="rounded-lg" src={yuba} alt="" />
         </div>
-        <div className="w-2/4">
+        <div className="lg:w-2/4 px-3 lg:px-0">
           <h2 className="text-black text-5xl leading-tight tracking-tighter font-bold">
             Experience The <span className="text-red-800">Sublime!</span>
           </h2>
