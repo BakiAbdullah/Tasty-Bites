@@ -72,7 +72,7 @@ const Registration = () => {
       <div className="container px-2 lg:px-0 mx-auto">
         <form
           onSubmit={handleRegister}
-          className="bg-white p-6 lg:p-10  border-2 rounded-lg w-full lg:w-2/3  mx-auto my-10 lg:my-16"
+          className="bg-white p-6 lg:p-10  border-2 rounded-lg w-full lg:w-2/5 mx-auto my-10 lg:my-16"
         >
           <h1 className="text-xl md:text-2xl font-bold leading-tight mb-5">
             Create an account
