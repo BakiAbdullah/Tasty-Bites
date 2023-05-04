@@ -108,7 +108,12 @@ const Header = () => {
                 <div className="rounded-full">
                   {user ? (
                     user?.photoURL ? (
-                      <img src={user.photoURL} alt="" srcset="" />
+                      <img
+                        src={user.photoURL}
+                        alt=""
+                        title={user?.displayName}
+                        srcset=""
+                      />
                     ) : (
                       <FaUserCircle className="text-2xl"></FaUserCircle>
                     )
