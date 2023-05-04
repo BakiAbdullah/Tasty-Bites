@@ -48,19 +48,7 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithPopup(auth, gitHubAuthProvider);
   };
-
-  // ===== Github signIn using firebase ======
-  const handleGithubSignIn = () => {
-    signInWithPopup(auth, githubProvider)
-      .then((result) => {
-        const loggedUser = result.user;
-        console.log(loggedUser);
-        setLoading(true);
-        setUser(loggedUser);
-      })
-      .catch(console.error());
-  };
-
+  
   const logOut = () => {
     setLoading(true);
     return signOut(auth);

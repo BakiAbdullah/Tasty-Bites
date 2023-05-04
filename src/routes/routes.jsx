@@ -28,6 +28,14 @@ const router = createBrowserRouter([
             <RecipesDetails></RecipesDetails>
           </PrivateRoute>
         ),
+        children: [
+          {
+            path: "/recipedetails/:id",
+            element: <ChefDetails></ChefDetails>,
+            loader: ({ params }) =>
+              fetch(`http://localhost:5173/recipedetails/${params.id}`),
+          },
+        ],
       },
       {
         path: "/blog",
@@ -50,15 +58,15 @@ const router = createBrowserRouter([
   // {
   //   path: "/recipedetails",
   //   element: <RecipesDetails></RecipesDetails>,
-  //   children: [
-  //     {
-  //       path: "/recipedetails/:id",
-  //       element: <ChefDetails></ChefDetails>,
-  //       loader: ({ params }) =>
-  //         fetch(
-  //           `https://chef-recipe-server-side-bakiabdullah.vercel.app/chefdata/${params.id}`
-  //         ),
-  //     },
+  // children: [
+  //   {
+  //     path: "/recipedetails/:id",
+  //     element: <ChefDetails></ChefDetails>,
+  //     loader: ({ params }) =>
+  //       fetch(
+  //         `https://chef-recipe-server-side-bakiabdullah.vercel.app/chefdata/${params.id}`
+  //       ),
+  //   },
   //   ],
   // },
 
