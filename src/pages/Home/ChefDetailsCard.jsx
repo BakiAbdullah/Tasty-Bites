@@ -46,7 +46,7 @@ const ChefDetailsCard = (props) => {
               </span>
             </button>
           </div>
-          <Link to={`/recipedetails`} state={chefData}>
+          <Link to={`/recipedetails/${chefId}`} state={chefData}>
             <button className="bg-amber-500 text-black px-6 py-2 mt-8 rounded-md">
               View Recipes{" "}
               <FaLongArrowAltRight className="inline-block text-red-800 duration-150 hover:transition-all hover:translate-x-1"></FaLongArrowAltRight>{" "}

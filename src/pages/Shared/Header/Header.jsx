@@ -7,7 +7,7 @@ import { AuthContext } from "../../../providers/AuthProvider";
 
 const Header = () => {
   const { user, logOut, username } = useContext(AuthContext);
-  console.log(username);
+  // console.log(username);
 
   // const [isHovering, setIsHovering] = useState(false);
   // const handleMouseOver = () => {

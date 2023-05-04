@@ -9,7 +9,7 @@ const ChefDetails = () => {
   const chefDatas = allChefdata.chefData;
   const { id } = useParams();
   const singleChefData = useLoaderData();
-  console.log(singleChefData);
+  // console.log(singleChefData);
 
   //  console.log(id)
   // console.log(chefDatas);

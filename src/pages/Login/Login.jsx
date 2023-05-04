@@ -13,6 +13,7 @@ const Login = () => {
   const location = useLocation();
   // console.log(location);
   const from = location.state?.from?.pathname || "/";
+  console.log(from);
 
   // ---- Google signIn using firebase ------
   const handleGoogleSignIn = (event) => {
@@ -22,7 +23,6 @@ const Login = () => {
         const loggedInUser = result.user;
         console.log(loggedInUser);
         setUser(loggedInUser);
-        form.reset();
         navigate(from, { replace: true });
       })
       .catch(console.error());
@@ -34,7 +34,6 @@ const Login = () => {
         const loggedInUser = result.user;
         console.log(loggedInUser);
         setUser(loggedInUser);
-        form.reset();
         navigate(from, { replace: true });
       })
       .catch(console.error());

@@ -28,7 +28,7 @@ const AuthProvider = ({ children }) => {
   const handleUserName = (name) => {
     setUsername(name);
   };
-  console.log(user);
+  // console.log(user);
 
   const createUser = (email, password) => {
     setLoading(true);
@@ -48,7 +48,7 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithPopup(auth, gitHubAuthProvider);
   };
-  
+
   const logOut = () => {
     setLoading(true);
     return signOut(auth);
