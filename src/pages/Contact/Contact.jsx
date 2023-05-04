@@ -11,13 +11,13 @@ const Contact = () => {
       }}
       className="bg-cover bg-center min-h-screen text-white"
     >
-      <div className="w-full text-center container  lg:mx-32 py-16">
+      <div className="w-full text-center container mx-auto lg:px-32 py-16">
         <div className="w-full px-2 lg:px-5">
           <h2 className="text-white text-3xl lg:text-6xl leading-tight tracking-normal font-bold">
             "Browse our traditional menus or let us create something new for
             you."
           </h2>
-          <p className="text-white py-7 px-8 lg:px-24">
+          <p className="text-white py-7 ">
             Alanzo, along with his team, offers culinary and management
             services. We have the experience to provide concept development
             strategies and best practice principles in order to achieve maximum

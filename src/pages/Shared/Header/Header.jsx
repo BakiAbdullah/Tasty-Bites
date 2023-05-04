@@ -51,7 +51,7 @@ const Header = () => {
                   className="hover:bg-red-800 hover:text-white"
                   to="/contact"
                 >
-                  contact
+                  Contact
                 </ActiveLink>
               </li>
               <li>
@@ -80,7 +80,7 @@ const Header = () => {
                 className="hover:bg-red-800 hover:text-white"
                 to="/contact"
               >
-                contact
+                Contact
               </ActiveLink>
             </li>
             <li>
