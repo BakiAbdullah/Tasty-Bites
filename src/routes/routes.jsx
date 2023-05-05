@@ -10,6 +10,7 @@ import RecipesDetails from "../pages/RecipesDetails/RecipesDetails";
 import RecipeDetailsLayout from "../layouts/RecipeDetailsLayout";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import BlogPdf from "../pages/Blogs/BlogPdf";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       // },
       {
         path: "/blog",
-        element: <Blogs></Blogs>,
+        element: <BlogPdf></BlogPdf>,
       },
       {
         path: "/login",
